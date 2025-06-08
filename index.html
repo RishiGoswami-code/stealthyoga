@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stealth Fitness - Premium Yoga & Meditation in Kushinagar. Founded by Rituraj Pandey. Transform your mind, body & soul with ancient techniques in Buddha's land.">
+    <meta name="keywords" content="Yoga in Kushinagar, Meditation classes, Rituraj Pandey, Stealth Fitness, Best Yoga center, Spiritual wellness, Kushinagar fitness">
+    <title>Stealth Fitness | Yoga & Meditation in Kushinagar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --serene-teal: #309898;
+            --golden-sun: #FF9F00;
+            --vital-orange: #F4631E;
+            --deep-red: #CB0404;
+            --lotus-pink: #FF6B8B;
+            --light-bg: #F5FDFD;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: var(--light-bg);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Righteous', cursive;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        
+        /* Hero Section (Divine Landing) */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 0%, rgba(48,152,152,0.3) 100%);
+            z-index: 1;
+            animation: pulse 8s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.3; }
+            100% { transform: scale(1.1); opacity: 0.5; }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeInUp 1.5s ease-out;
+            color: var(--golden-sun);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1.5s ease-out 0.3s forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--golden-sun);
+            color: #333;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1.5s ease-out 0.6s forwards;
+            opacity: 0;
+            border: 2px solid var(--golden-sun);
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            color: var(--golden-sun);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+        
+        .btn-secondary:hover {
+            background-color: white;
+            color: #333;
+        }
+        
+        /* Navigation (Sticky & Modern) */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        
+        nav.scrolled {
+            background-color: rgba(255,255,255,0.95);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 15px 50px;
+        }
+        
+        nav.scrolled .logo, nav.scrolled a {
+            color: #333;
+        }
+        
+        nav.scrolled .btn-nav {
+            border-color: var(--golden-sun);
+            color: #333;
+        }
+        
+        nav.scrolled .btn-nav:hover {
+            background-color: var(--golden-sun);
+        }
+        
+        .logo {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.8rem;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--golden-sun);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--golden-sun);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .btn-nav {
+            padding: 8px 20px;
+            border: 2px solid white;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-nav:hover {
+            background-color: white;
+            color: #333;
+        }
+        
+        /* About Founder (Rituraj Pandey) */
+        .founder-section {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .founder-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .founder-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+            transition: all 0.5s ease;
+        }
+        
+        .founder-image:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 40px rgba(0,0,0,0.15);
+        }
+        
+        .founder-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .founder-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .founder-info {
+            flex: 1;
+        }
+        
+        .founder-info h2 {
+            font-size: 2.5rem;
+            color: var(--serene-teal);
+            margin-bottom: 20px;
+        }
+        
+        .founder-info h3 {
+            font-size: 1.5rem;
+            color: var(--vital-orange);
+            margin-bottom: 15px;
+        }
+        
+        .founder-info p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        /* Yoga Classes Section */
+        .classes-section {
+            padding: 100px 0;
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
+                        url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .class-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .class-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .class-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .class-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .class-card:hover .class-image img {
+            transform: scale(1.1);
+        }
+        
+        .class-details {
+            padding: 20px;
+        }
+        
+        .class-details h3 {
+            font-size: 1.5rem;
+            color: var(--deep-red);
+            margin-bottom: 10px;
+        }
+        
+        .class-time {
+            color: var(--serene-teal);
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .class-btn {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: var(--golden-sun);
+            color: #333;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        .class-btn:hover {
+            background-color: var(--vital-orange);
+            color: white;
+        }
+        
+        /* Pricing Section */
+        .pricing-section {
+            padding: 100px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .pricing-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .pricing-header {
+            background: linear-gradient(to right, var(--serene-teal), var(--vital-orange));
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .pricing-header h2 {
+            font-size: 2rem;
+        }
+        
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .pricing-table th, .pricing-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .pricing-table th {
+            background-color: var(--serene-teal);
+            color: white;
+            font-weight: 500;
+        }
+        
+        .pricing-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .pricing-table tr:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .price {
+            color: var(--vital-orange);
+            font-weight: 700;
+        }
+        
+        .enroll-btn {
+            padding: 8px 15px;
+            background-color: var(--golden-sun);
+            color: #333;
+            border: none;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .enroll-btn:hover {
+            background-color: var(--vital-orange);
+            color: white;
+        }
+        
+        /* Floating Lotus Animation (For Kids & Engagement) */
+        .floating-lotus {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23FF6B8B" d="M50 20c-16.6 0-30 13.4-30 30s13.4 30 30 30 30-13.4 30-30-13.4-30-30-30zm0 55c-13.8 0-25-11.2-25-25s11.2-25 25-25 25 11.2 25 25-11.2 25-25 25z"/><path fill="%23FF6B8B" d="M50 30c-11 0-20 9-20 20s9 20 20 20 20-9 20-20-9-20-20-20zm0 35c-8.3 0-15-6.7-15-15s6.7-15 15-15 15 6.7 15 15-6.7 15-15 15z"/></svg>');
+            background-size: contain;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0;
+            z-index: 10;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+        
+        /* Testimonials */
+        .testimonials-section {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .testimonials-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial {
+            background-color: #f9f9f9;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            margin: 0 20px;
+        }
+        
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--serene-teal);
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            padding: 100px 0;
+            background: linear-gradient(rgba(48,152,152,0.9), rgba(48,152,152,0.9)), 
+                        url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--golden-sun);
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-detail i {
+            margin-right: 15px;
+            font-size: 1.2rem;
+            color: var(--golden-sun);
+        }
+        
+        .contact-form {
+            flex: 1;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .contact-form h2 {
+            color: var(--serene-teal);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+        }
+        
+        .submit-btn {
+            background-color: var(--golden-sun);
+            color: #333;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--vital-orange);
+            color: white;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--serene-teal);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--golden-sun);
+        }
+        
+        .footer-col p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--golden-sun);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--golden-sun);
+            color: #333;
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 40px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .founder-container {
+                flex-direction: column;
+            }
+            
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 20px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        /* Scroll Animations */
+        .reveal {
+            position: relative;
+            transform: translateY(50px);
+            opacity: 0;
+            transition: all 1s ease;
+        }
+        
+        .reveal.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="#" class="logo">Stealth <span>Fitness</span></a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#classes">Classes</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#pricing" class="btn-nav">Join Now</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Awaken Your Inner Peace</h1>
+            <p>Founded by <strong>Rituraj Pandey</strong>, Stealth Fitness brings ancient Yoga & Meditation techniques to Kushinagar – the sacred land of Buddha.</p>
+            <a href="#classes" class="btn">Explore Classes</a>
+            <a href="#pricing" class="btn btn-secondary">Join Today</a>
+        </div>
+    </section>
+
+    <!-- About Founder (Rituraj Pandey) -->
+    <section class="founder-section" id="about">
+        <div class="founder-container reveal">
+            <div class="founder-image">
+                <img src="./4-small.png" alt="Rituraj Pandey - Founder of Stealth Fitness">
+            </div>
+            <div class="founder-info">
+                <h2>Meet Rituraj Pandey</h2>
+                <h3>Founder & Lead Instructor</h3>
+                <p>With over 10 years of experience in Yoga & Meditation, Rituraj Pandey established Stealth Fitness to bring holistic wellness to Kushinagar. His teachings blend traditional Hatha Yoga with modern mindfulness techniques.</p>
+                <p>"Kushinagar is where Buddha attained Mahaparinirvana. There's no better place to practice Yoga & Meditation than this sacred land."</p>
+                <a href="#classes" class="btn" style="margin-top: 20px;">Learn His Methods</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Yoga Classes Section -->
+    <section class="classes-section" id="classes">
+        <div class="section-title reveal">
+            <h2>Our Yoga & Meditation Classes</h2>
+        </div>
+        <div class="class-grid">
+            <div class="class-card reveal">
+                <div class="class-image">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Hatha Yoga">
+                </div>
+                <div class="class-details">
+                    <h3>Hatha Yoga</h3>
+                    <span class="class-time">Mon, Wed, Fri | 6:00 AM - 7:30 AM</span>
+                    <p>Traditional postures & breathing techniques for strength & flexibility.</p>
+                    <a href="#pricing" class="class-btn">Enroll Now</a>
+                </div>
+            </div>
+            <div class="class-card reveal">
+                <div class="class-image">
+                    <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Vinyasa Flow">
+                </div>
+                <div class="class-details">
+                    <h3>Vinyasa Flow</h3>
+                    <span class="class-time">Tue, Thu, Sat | 7:00 AM - 8:30 AM</span>
+                    <p>Dynamic movement synchronized with breath for energy & vitality.</p>
+                    <a href="#pricing" class="class-btn">Enroll Now</a>
+                </div>
+            </div>
+            <div class="class-card reveal">
+                <div class="class-image">
+                    <img src="https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Meditation">
+                </div>
+                <div class="class-details">
+                    <h3>Guided Meditation</h3>
+                    <span class="class-time">Daily | 5:30 PM - 6:30 PM</span>
+                    <p>Mindfulness techniques to reduce stress & enhance clarity.</p>
+                    <a href="#pricing" class="class-btn">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="pricing-container reveal">
+            <div class="pricing-header">
+                <h2>Membership Plans</h2>
+            </div>
+            <div class="pricing-table-container" style="padding: 20px;">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Plan</th>
+                            <th>Duration</th>
+                            <th>Classes</th>
+                            <th>Price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Basic</td>
+                            <td>1 Month</td>
+                            <td>12 Classes</td>
+                            <td class="price">₹1,500</td>
+                            <td><button class="enroll-btn">Enroll</button></td>
+                        </tr>
+                        <tr>
+                            <td>Standard</td>
+                            <td>3 Months</td>
+                            <td>36 Classes</td>
+                            <td class="price">₹3,600</td>
+                            <td><button class="enroll-btn">Enroll</button></td>
+                        </tr>
+                        <tr>
+                            <td>Premium</td>
+                            <td>6 Months</td>
+                            <td>72 Classes</td>
+                            <td class="price">₹6,000</td>
+                            <td><button class="enroll-btn">Enroll</button></td>
+                        </tr>
+                        <tr>
+                            <td>Unlimited</td>
+                            <td>1 Year</td>
+                            <td>Unlimited</td>
+                            <td class="price">₹10,000</td>
+                            <td><button class="enroll-btn">Enroll</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 20px; text-align: center; font-style: italic;">* Private sessions available. Ask for details!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="section-title reveal">
+            <h2>What Our Students Say</h2>
+        </div>
+        <div class="testimonials-slider reveal">
+            <div class="testimonial">
+                <p class="testimonial-text">"Stealth Fitness transformed my life. Rituraj's meditation techniques helped me overcome anxiety, and the Yoga classes improved my flexibility dramatically."</p>
+                <p class="testimonial-author">- Priya Sharma, Kushinagar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container reveal">
+            <div class="contact-info">
+                <h2>Visit Us in Kushinagar</h2>
+                <div class="contact-details">
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Near Mahaparinirvana Temple, Kushinagar, UP 274403</p>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <p>+91 9876543210</p>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@stealthfitness.com</p>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-clock"></i>
+                        <p>Open Daily: 6:00 AM - 8:00 PM</p>
+                    </div>
+                </div>
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h2>Get in Touch</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Stealth Fitness</h3>
+                <p>Kushinagar's premier Yoga & Meditation center, founded by Rituraj Pandey. Experience transformation in Buddha's sacred land.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Explore Kushinagar</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Mahaparinirvana Temple</a></li>
+                    <li><a href="#">Ramabhar Stupa</a></li>
+                    <li><a href="#">Buddha Museum</a></li>
+                    <li><a href="#">Meditation Parks</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Subscribe for wellness tips & special offers.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <button type="submit" class="submit-btn" style="width: 100%;">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Stealth Fitness. Founded by Rituraj Pandey. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Lotus Elements (For Engagement) -->
+    <div id="lotus-container"></div>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Scroll reveal animation
+        function reveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const revealTop = reveals[i].getBoundingClientRect().top;
+                const revealPoint = 150;
+                
+                if (revealTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+        
+        window.addEventListener('scroll', reveal);
+        
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', function() {
+            reveal();
+            
+            // Create floating lotus flowers
+            const lotusContainer = document.getElementById('lotus-container');
+            const colors = ['#FF6B8B', '#FF9F00', '#309898', '#F4631E'];
+            
+            // Create lotuses on mouse move
+            document.addEventListener('mousemove', function(e) {
+                if (Math.random() > 0.96) { // 4% chance per move
+                    const lotus = document.createElement('div');
+                    lotus.className = 'floating-lotus';
+                    
+                    // Random position near cursor
+                    const x = e.clientX + (Math.random() * 40 - 20);
+                    const y = e.clientY + (Math.random() * 40 - 20);
+                    
+                    lotus.style.left = x + 'px';
+                    lotus.style.top = y + 'px';
+                    lotus.style.animationDuration = (4 + Math.random() * 5) + 's';
+                    
+                    lotusContainer.appendChild(lotus);
+                    
+                    // Remove after animation
+                    setTimeout(() => {
+                        lotus.remove();
+                    }, 6000);
+                }
+            });
+            
+            // Create random floating lotuses
+            setInterval(() => {
+                const lotus = document.createElement('div');
+                lotus.className = 'floating-lotus';
+                
+                // Random position
+                const x = Math.random() * window.innerWidth;
+                const y = window.innerHeight + 20;
+                
+                lotus.style.left = x + 'px';
+                lotus.style.top = y + 'px';
+                lotus.style.animationDuration = (5 + Math.random() * 6) + 's';
+                
+                lotusContainer.appendChild(lotus);
+                
+                // Remove after animation
+                setTimeout(() => {
+                    lotus.remove();
+                }, 11000);
+            }, 2000);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
